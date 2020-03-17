@@ -1,0 +1,18 @@
+pipeline {
+agent any 
+  tools {
+    maven 'Maven'
+} 
+  stages {
+    stage ('Initialize') {
+      steps {
+      }
+    }
+    
+    stage ('Build') {
+      steps {
+        sh 'mvn3 clean package'
+      }
+    }
+  }
+}
